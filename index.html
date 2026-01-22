@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Fruit Trio Classic</title>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- REELS (LOGIC OVERLAY ONLY) -->
+    <section class="reel-area" aria-label="Reels">
+      <div class="reel-mask">
+        <div class="reels">
+          <div class="reel"><div class="strip"></div></div>
+          <div class="reel"><div class="strip"></div></div>
+          <div class="reel"><div class="strip"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HUD (32px below reels, 32px above controls) -->
+    <section class="hud" aria-label="Balance and Bet">
+      <img src="assets/ui/hud.png" class="hud-skin" alt="" />
+      <div class="hud-text hud-balance">
+        Balance&nbsp;<span id="balanceValue">1000</span>$
+      </div>
+      <div class="hud-text hud-bet">
+        Bet&nbsp;$<span id="betValue">1.00</span>
+      </div>
+    </section>
+
+    <!-- CONTROLS -->
+    <section class="controls-panel" aria-label="Controls">
+      <img src="assets/ui/Controls.png" class="controls-skin" alt="" />
+
+      <button id="reset" class="hit hit-reset" aria-label="Reset"></button>
+      <button id="spin" class="hit hit-spin" aria-label="Spin"></button>
+      <button id="betMinus" class="hit hit-minus" aria-label="Decrease bet"></button>
+      <button id="betPlus" class="hit hit-plus" aria-label="Increase bet"></button>
+    </section>
+
+    <!-- WIN OVERLAY (FULL-FRAME VIDEO) -->
+    <div id="winOverlay" class="win-overlay" aria-hidden="true">
+      <video
+        id="winVideo"
+        src="assets/ui/win/win.mp4"
+        playsinline
+        muted
+        preload="auto"
+      ></video>
+      <button id="closeWin" class="win-close" aria-label="Close win animation"></button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
