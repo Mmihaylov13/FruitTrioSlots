@@ -218,12 +218,12 @@ body{
 
 /* While spinning */
 .reel.spinning .strip{
-  filter: blur(1.5px);
+  filter: blur(1.0px);
 }
 
 /* Slight easing out as it stops */
 .reel.stopping .strip{
-  filter: blur(1px);
+  filter: blur(0.5px);
   transition: filter 180ms ease-out;
 }
 
@@ -258,4 +258,5 @@ body{
 .cell.win::after{
   animation: winPulse 1.2s ease-in-out infinite;
 }
+
 
